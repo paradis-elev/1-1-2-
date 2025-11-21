@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,4 +62,243 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            c
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: var(--red);
+            border: none;
+            color: var(--white);
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: var(--red-dark);
+        }
+
+        /* ----------- PRODUCT GRID ----------- */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 20px;
+            font-size: 36px;
+            color: var(--green);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            padding: 0 50px 50px;
+        }
+
+        .product {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.03);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            margin: 0 0 10px;
+            color: var(--green);
+        }
+
+        .product-info p {
+            margin: 0 0 15px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--red);
+            font-size: 20px;
+        }
+
+        .product button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: var(--green);
+            color: var(--white);
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .product button:hover {
+            background: var(--green-light);
+        }
+
+        /* ----------- FOOTER ----------- */
+        footer {
+            background: var(--red);
+            padding: 20px;
+            text-align: center;
+            color: var(--white);
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: var(--white);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>It's Timeeee 🎄</h1>
+
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div>
+            <h2>Welcome to the Ultimate Christmas Shop!</h2>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <!-- PRODUCT SECTION -->
+    <h2 class="section-title" id="products">Featured Christmas Products</h2>
+
+    <section class="products">
+
+        <!-- PRODUCT 1 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1607083204255-174ddc6f2e6d" alt="Christmas Tree">
+            <div class="product-info">
+                <h3>Classic Christmas Tree</h3>
+                <p>A beautiful 6ft evergreen tree to brighten your holidays.</p>
+                <div class="price">$79.99</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176" alt="Christmas Lights">
+            <div class="product-info">
+                <h3>LED Christmas Lights</h3>
+                <p>Warm white lights perfect for decorating your home.</p>
+                <div class="price">$24.99</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1607082985283-026b98deabe8" alt="Ornaments">
+            <div class="product-info">
+                <h3>Ornament Set</h3>
+                <p>A 24-piece ornament collection in red and green.</p>
+                <div class="price">$19.99</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf" alt="Santa Hat">
+            <div class="product-info">
+                <h3>Santa Hat</h3>
+                <p>Soft and fluffy Santa hat to spread holiday cheer.</p>
+                <div class="price">$9.99</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1577140929287-2d0b260ec87e" alt="Gift Box">
+            <div class="product-info">
+                <h3>Holiday Gift Box</h3>
+                <p>Beautifully wrapped box for your perfect Christmas gift.</p>
+                <div class="price">$6.99</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1609137144813-7e76aa180697" alt="Snow Globe">
+            <div class="product-info">
+                <h3>Snow Globe</h3>
+                <p>A magical snow globe with a festive winter scene.</p>
+                <div class="price">$14.99</div>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <h2 class="section-title" id="about">About It's Timeeee</h2>
+    <section style="padding: 0 60px; font-size: 18px; line-height: 1.7;">
+        <p>
+            Welcome to <strong>It's Timeeee</strong> — your one-stop Christmas wonderland!  
+            Our mission is to bring the warmth, joy, and sparkle of Christmas to homes around the world.
+        </p>
+        <p>
+            We offer a wide variety of festive decorations, trees, lights, ornaments, holiday clothing, 
+            gifts, and more. Whether you're preparing for a cozy family celebration or going all out 
+            with holiday décor, we've got everything you need!
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <h2 class="section-title" id="contact">Contact Us</h2>
+    <section style="padding: 0 60px; font-size: 18px;">
+        <p>Email: <strong>support@itstimeeee.com</strong></p>
+        <p>Phone: <strong>+1 (800) 555-CHRISTMAS</strong></p>
+        <p>Address: <strong>North Pole, Snowflake Avenue 12</strong></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 It's Timeeee | Made with ❤️ and 🎄  
+        <br>
+        <a href="#products">Back to top</a>
+    </footer>
+
+</body>
+</html>
